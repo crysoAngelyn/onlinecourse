@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <title>ONLINE EDUCATION</title>
+<link rel="stylesheet" href="D:\onlinecourse\log.css"> 	  
+</head>
+<body>
+
+
+
+<!--header section starts -->
+<header>
+
+ <!--navigation bar begins-->
+ <nav>
+ <!--logo image-->
+ <img class="logo-img" src="D:\onlinecourse\images\logo.png" width="15%" height="15%" ALT="webedu" ALIGN=left>
+<ul>
+<li><a  href="webeducation.html">HOME</a></li>
+<li><a href="aboutus.html">ABOUT</a></li>
+<li><a href="courses.html">COURSES <span class="caret"></span></a>
+
+</li>
+<li><a href="about.html">REGISTER</a></li>
+<li><a href="signup.html">SIGNUP</a></li>
+<li><a href="contact.html">CONTACT</a></li>
+</ul>
+</nav>
+</div>
+<!--navigation bar ends-->
+</header>
+<!-- header section ends-->
+
+
+<!-- loginform section begins-->
+<section>
+	<div class="login">
+  <h1>Log In to WebEdu</h1>
+  <form>
+    <p><input type="email" name="usermail" placeholder="yourname@email.com" required></p>
+    <p> <input type="password" id="password" placeholder="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,8}$" required> <span  class="errormessage">Password should contain 6-20 characters with atleast one digit,one uppercase & one lowercase.</span>
+			<span id="err1" class="errormessage1"> </span></td></p>
+    <p class="remember_me">
+      <label>
+        <input type="checkbox" name="remember_me" id="remember_me" required>
+        Remember me
+      </label>
+    </p>
+    <p class="submit"><input type="submit" name="commit" value="Login" id="logsub"></p>
+	 <p class="login-help">Forgot your password? <a href="#">Click here to reset it</a>.</p>
+	  <p class="login-help">New User? <a href="signup.html">Create an account</a>.</p>
+  </form>
+  
+  <script>
+  var logbtn=document.getElementById('logsub');
+function checkValidity() 
+{
+  var pass= document.getElementById('password');
+    if(pass.checkValidity )
+	{
+	document.getElementById("err1").innerHTML=pass.validationMessage;
+
+	}
+}
+logbtn.onclick=function(e) {
+var bool=checkValidity();
+if(bool==false) { 
+e.preventDefault();
+}
+
+  // location.replace("https://www.w3schools.com");
+//}
+ };
+  </script>
+  
+  
+</div>
+</section>
+<!-- loginform section ends-->
+
+
+
+
+
+
+<!-- footer begins -->
+
+<footer>
+       
+       
+        <div class="bar">
+            <div class="bar-wrap">
+                <ul class="links"> <!-- footer menu -->
+                   <li><a href="webeducation.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="social">
+                    <a href="#" class="fb">
+                <span data-icon="f" class="icon"></span>
+               
+            </a>
+            <a href="#" class="tw">
+                <span data-icon="T" class="icon"></span>
+                
+            </a>
+            <a href="#" class="rss">
+                <span data-icon="R" class="icon"></span>
+                
+            </a>
+        </div>
+        <!-- social icons are here -->
+                </div>
+                <div class="clear"></div>
+                <div class="copyright">Copyright &copy; 2014.WebEducation site by crysolite</div>
+            </div>
+        </div>
+    </footer>
+<!-- footer ends -->
+</body>
+	</html>
+	
