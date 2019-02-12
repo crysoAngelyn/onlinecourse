@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>ONLINE EDUCATION</title>
+	
+	<link rel="stylesheet" href="webedu.css"> 	
+	<!--slideshow image-->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+
+<body>
+<!--header section starts -->
+<header>
+
+ <!--navigation bar begins-->
+ <nav>
+ <!--logo image-->
+ <img class="logo-img" src="logo.png" width="15%" height="15%" ALT="webedu" ALIGN=left>
+<ul>
+<li><a  href="webeducation.html">HOME</a></li>
+<li><a href="aboutus.html">ABOUT</a></li>
+<li>
+            <a href="courses.html">COURSES <span class="caret"></span></a>
+<div>
+<ul>
+<li><a href="products.html#chair">Vedios</a></li>
+<li><a href="products.html#table">Catalog</a></li>
+<li><a href="cooker.html">Price</a></li>
+</ul>
+</div>
+</li>
+<li><a href="register.html">REGISTER</a></li>
+<li><a href="signup.html">SIGNUP</a></li>
+<li><a href="contact.html">CONTACT</a></li>
+</ul>
+</nav>
+<!--navigation bar ends-->
+</header>
+<!-- header section ends-->
+
+<!-- div image slider section starts -->
+<div class="w3-content w3-section" style="max-width:1800px">
+  <img class="mySlides" src="img6.jpg" style="width:100%">
+  <img class="mySlides" src="img7.jpg" style="width:100%">
+  <img class="mySlides" src="img13.jpg" style="width:100%">
+    
+  <div class="centered"><h2 style="font-weight:bold; color:#FFF" >From courses to degrees</h2><br>
+ <h5 style="font-weight:bold; font-size:20px"> 100% online learning from the world’s best universities and companies<h5><br>
+ <form>
+ <input class="loginbtn" type="submit" value="Login" name="logbtn" formaction="login.html">
+</form>
+  </div>
+</div>
+      
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 3000); // Change image every 2 seconds
+}
+
+</script>
+<!--div image slider section ends -->
+
+<!-- section container-table-row starts -->
+<section class="sec">
+<div class="container-table-row">
+
+<div class="table-body-cell">
+<div class="card">
+  <img src="1.png" alt="John" style="width:50%"><br><br>
+  <h4 style="font-weight:bold">ONLINE COURSES</h4><br>
+  <p class="title">Take courses from the world's best instructors and universities. Courses include 
+
+recorded auto-graded and peer-reviewed assignments, video lectures, and community discussion forums. 
+
+When you complete a course, you’ll be eligible to receive a shareable electronic Course Certificate 
+
+for a small fee.</p>
+</div>
+</div>
+
+<div class="table-body-cell">
+<div class="card">
+  <img src="2.png" alt="John" style="width:50%"><br><br>
+  <h4 style="font-weight:bold">MEET OUR STAFF</h4><br>
+  <p class="title">Our coaches are hand selected as hardworking compassionate men and women, whose 
+
+goal is to progress parkour and train and foster the next generation of athletes and community 
+
+members.</p>
+</div>
+</div>
+
+<div class="table-body-cell">
+<div class="card">
+  <img src="3.png" alt="John" style="width:50%"><br><br>
+  <h4 style="font-weight:bold">LATEST UPDATES</h4><br>
+  <p class="title">Join our WebEducation group to get latest updates on exam notifications and 
+
+scholarships across India and abroad.When you complete a course, you’ll be eligible to receive a shareable electronic Course Certificate 
+
+for a small fee.</p>
+ </div>
+</div>
+
+
+<div class="table-body-cell">
+<div class="card">
+  <img src="4.png" alt="John" style="width:50%"><br><br>
+  <h4 style="font-weight:bold">PLACEMENT</h4><br>
+  <p class="title">Professional Certificates are training programs from top universities and companies 
+
+that help you be job-ready. Some Professional Certificate programs prepare you to pass an industry 
+
+certification exam, while others help you get the experience needed to launch a career in a specific 
+
+field such as IT support.</p>
+</div>
+</div>
+
+
+</div>
+<!-- section container-table-row ends -->
+
+
+<!-- article begins -->
+<div >
+
+<div class="article-aboutus">
+<div class="harticle">
+  
+  <h2 style="font-weight:bold">About Us</h2><br>
+   <img src="a1.png" alt="John" style="width:70%">
+   <br><br>
+  <p class="title">WebEdu was founded in 2012 by two Stanford Computer Science professors who wanted to share their knowledge and skills with the world.</p>
+<p class="title">Professors Daphne Koller and Andrew Ng put their courses online for anyone to take and taught more learners in a few months than they could have in an entire lifetime in the classroom.</p>
+<br>
+<p class="title">Since then, we’ve built a platform where anyone, anywhere can learn and earn credentials from the world’s top universities and education providers.</p>
+  <a href="aboutus.html" target="_self" style="font-weight:bold">read more</a>
+</div>
+</div>
+
+<div class="article-aboutus">
+<div class="harticle">
+  
+  <h2 style="font-weight:bold">Up Coming Courses</h2><br>
+<p> <a style="color:#4169E1" href="" target="_self">Mathematics and Computer Science</a></p>
+<p> <a style="color:#4169E1" href="" target="_self">Mathematics and Philosophy</a></p>
+<p> <a style="color:#4169E1" href="" target="_self">hilosophy and Modern Languages</a></p>
+<p> <a style="color:#4169E1" href="" target="_self">History (Ancient and Modern)</a></p>
+<p> <a style="color:#4169E1" href="" target="_self">Classical Archaeology and Ancient History</a></p>
+<p><a style="color:#4169E1" href="" target="_self">Physics and Philosophy</a></p>
+<p><a style="color:#4169E1" href="" target="_self">Physics and Computer Science</a></p>
+<p> <a style="color:#4169E1" href="" target="_self">Mathematics and Philosophy</a></p>
+<p> <a style="color:#4169E1" href="" target="_self">hilosophy and Modern Languages</a></p>
+<p> <a style="color:#4169E1" href="" target="_self">History (Ancient and Modern)</a></p>
+</div>
+</div>
+
+</div>
+<!-- article ends -->
+
+</section>
+
+<!-- footer begins -->
+
+<footer>
+       
+        <ul>
+          <li>
+       
+        <div class="text">
+            <h4>Address</h4>
+            <div>
+<p>21,Revolution Street</p>
+<p>Paris,chennai</p>
+<p>TamilNadu,India</p>
+<p>pincode-600091</p>
+        </div>
+    </li>
+	
+	 <li>
+       
+        <div class="text">
+            <h4>Categories</h4>
+            <div>
+<p>Individual Plans</p> 
+<p>Business Plans</p>
+<p>Free Trial</p>
+<p>Academic</p>
+        </div>
+    </li>
+    <li>
+     
+        <div class="text">
+            <h4>Contact</h4>
+            <div>
+<p>+1 555 123456</p>
+<p>+91 8555123</p>
+<p>+0452 223456</p>
+<p>+1 555 173456</p>
+        </div>
+    </li>
+    <li>
+       
+        <div class="text">
+            <h4>Mail Us</h4>
+            <div>
+<p>support@gmail.com</p>
+<p>WebEdufaq@yahoo.com</p>
+<p>we@gmail.com</p>
+<p>WebEducation@rediff.com</p>
+        </div>
+    </li> 
+        </ul>
+        <div class="bar">
+            <div class="bar-wrap">
+                <ul class="links"> <!-- footer menu -->
+                    <li><a href="webeducation.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="social">
+                    <a href="webeducation.html" class="fb">
+                <span data-icon="f" class="icon"></span>
+               
+            </a>
+            <a href="webeducation.html" class="tw">
+                <span data-icon="T" class="icon"></span>
+                
+            </a>
+            <a href="webeducation.html" class="rss">
+                <span data-icon="R" class="icon"></span>
+                
+            </a>
+        </div>
+        <!-- social icons are here -->
+                </div>
+                <div class="clear"></div>
+                <div class="copyright">Copyright &copy; 2014.WebEducation site by crysolite</div>
+            </div>
+        
+    </footer>
+<!-- footer ends -->
+
+
+    </body>
+</html>
