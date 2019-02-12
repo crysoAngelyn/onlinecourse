@@ -151,9 +151,9 @@ position:fixed;
 
 .login {
  position: center;
-  margin:160px 20px 100px 280px;
+  margin:10% 20% 10% 20%;
   padding: 20px 20px 20px 20px;
-  width: 750px;
+  width: 60%;
   background: white;
   border-radius: 3px;
   -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
@@ -200,7 +200,7 @@ position:fixed;
 }*/
 
 .login input[type=email], .login input[type=password], .login input[type=text] {
-  width: 578px;
+  width:60%;
 }
 
 .login p.remember_me {
@@ -415,9 +415,9 @@ footer .bar {
 footer .bar-wrap {
     font-size: 12px;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 100%;
     position: relative;
-    width: 95%;
+    width: 100%;
 }
 .links {
     float: left;
