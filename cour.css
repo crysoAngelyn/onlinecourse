@@ -309,7 +309,7 @@ footer .bar {
 footer .bar-wrap {
     font-size: 12px;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 100%;
     position: relative;
     width: 95%;
 }
