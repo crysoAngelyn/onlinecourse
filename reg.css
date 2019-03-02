@@ -200,7 +200,7 @@ position:fixed;
 }*/
 
 .login input[type=email], .login input[type=password], .login input[type=text] , .login input[type=date] , .login input[type=radio] {
-  width:40%;
+  width:60%;
 }
 
 .login p.remember_me {
