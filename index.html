@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>ONLINE EDUCATION</title>
+	
+	
+	<!--slideshow image-->
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+    
+
+
+/* Header */
+header {
+  background-color: #fff;
+   padding: 10px 20px 30px 0px; /* top right bottom left*/
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  
+ 
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: 0.2s;
+}
+
+
+body 
+{ 
+padding-top: 25px; 
+}
+
+
+/*Navigation bar*/
+
+nav {
+position:fixed;
+ background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 4px;
+ /* box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);*/
+  color: #888;
+  display: block;
+  margin: 0px 0px 0px 0px;
+  overflow: hidden;
+  width: 100%;
+}
+ 
+  nav ul {
+    margin: 0;
+    padding: 0;
+  }
+ 
+    nav ul li {
+      display: inline-block;
+      list-style-type: none;
+  font-size:15px;
+        font-weight:bold;
+      -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+ 
+      nav > ul > li > a > .caret {
+        border-top: 4px solid #aaa;
+       
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+        content: "";
+        display: inline-block;
+        height: 0;
+        width: 0;
+        vertical-align: middle;
+ 
+        -webkit-transition: color 0.1s linear;
+          -moz-transition: color 0.1s linear;
+        -o-transition: color 0.1s linear;
+          transition: color 0.1s linear;
+      }
+ 
+      nav > ul > li > a {
+        color: #aaa;
+        display: block;
+        line-height: 56px;
+        padding: 0 24px;
+        text-decoration: none;
+      }
+ 
+        nav > ul > li:hover {
+          background-color:#4169E1;
+        }
+ 
+        nav > ul > li:hover > a {
+          color: rgb( 255, 255, 255 );
+        }
+ 
+        nav > ul > li:hover > a > .caret {
+          border-top-color: rgb( 255, 255, 255 );
+        }
+ 
+      nav > ul > li > div {
+		  position:relative;
+        background-color:#fff;
+        border-top: 0;
+        border-radius: 0 0 4px 4px;
+        box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+        display: none;
+        margin: 0;
+        opacity: 0;
+       /* position: absolute;*/
+        width: 165px;
+    visibility: hidden;
+    z-index: 100;
+ 
+        -webkit-transiton: opacity 0.2s;
+        -moz-transition: opacity 0.2s;
+        -ms-transition: opacity 0.2s;
+        -o-transition: opacity 0.2s;
+        -transition: opacity 0.2s;
+      }
+ 
+        nav > ul > li:hover > div {
+          display: block;
+          opacity: 1;
+          visibility: visible;
+        }
+ 
+          nav > ul > li > div ul > li {
+            display: block;
+          }
+ 
+            nav > ul > li > div ul > li > a {
+              color: #aaa;
+              display: block;
+              padding: 12px 24px;
+              text-decoration: none;
+            }
+ 
+              nav > ul > li > div ul > li:hover > a {
+                background-color:#d5f4e6;
+              }
+
+
+
+
+/*slideshow */
+.sBorder {
+    height: 250px;
+    width: 650px;
+   /* margin: 20px;*/
+    background: rgba(255,255,255,.5);
+}
+.mySlides 
+{
+display:none
+}
+
+/*.mySlides.img {
+  opacity: 0.5;
+ 
+}*/
+
+/*text over slideshow*/
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*button over slideshow*/
+.loginbtn
+{
+	background-color:#0099cc;
+  border: none;
+  color: white;
+  font-weight:bold;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+/*section*/ 
+.sec{
+margin:20px 30px 20px 30px;
+}
+
+
+
+/*container table-row */
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 80%;
+  height: 90%;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+   padding:10px 10px 10px 5px;
+}
+
+.title {
+  color:#404040;
+  font-size: 15px;
+}
+
+.table-body-cell{
+display: table-cell;
+padding: 0.5%;
+}
+
+.container-table-row{
+display: table-row;
+}
+
+/*article-about us */
+
+.harticle 
+{
+   margin: auto;
+  text-align: left;
+  font-family: arial;
+}
+.article-aboutus
+{
+display: table-cell;
+padding: 40px;
+}
+
+/*article-upcoming courses */
+
+
+
+/*footer*/
+
+@import url(http://weloveiconfonts.com/api/?family=zocial);
+* {
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'zocial', sans-serif;
+}
+[data-icon]:before {
+    font-family: 'zocial';
+    content: attr(data-icon);
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+    -o-transition:  all .2s linear;
+    transition: all .2s linear;
+}
+.clear {
+    clear: both;
+}
+
+
+
+footer {
+    background-color:#D3D3D3;
+    position: relative;
+    z-index: 1;
+}
+
+
+footer > ul {
+    list-style: none outside none;
+    margin: 0 auto;
+    max-width: 1200px;
+    overflow: hidden;
+    padding: 25px 0;
+    position: relative;
+    width: 95%;
+}
+footer > ul li {
+    float: left;
+    padding: 20px 15px;
+    width: 20.3%;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+
+footer > ul li .icon {
+    color: #999999;
+    float: left;
+    font-size: 60px;
+    line-height: 80px;
+}
+footer > ul li .text {
+    color: #282828;
+    font-size: 13px;
+    line-height: 20px;
+  margin-left: 105px;
+    position: relative;
+    text-align: justify;
+}
+.text h4 {
+    color: #999999;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.text a {
+    border-bottom: 1px dotted transparent;
+    color: #FFDD00;
+    font-weight: bold;
+}
+.text a:hover {
+    border-color: #FFDD00;
+}
+
+
+
+
+footer .bar {
+    background-color:#181818;
+    padding: 15px 0;
+}
+footer .bar-wrap {
+    font-size: 12px;
+    margin: 0 auto;
+    max-width: auto;
+    position: relative;
+    width: 95%;
+}
+.links {
+    float: left;
+    list-style: none outside none;
+    position: relative;
+}
+.links li {
+    float: left;
+    margin-right: 10px;
+}
+.links a {
+    color: #778888;
+}
+.links a:hover {
+    color: #FFFFFF;
+}
+
+
+
+.social {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.social a {
+    color: #778888;
+    margin-left: 20px;
+}
+.social a:hover {
+    color: #FFFFFF;
+}
+.social .icon {
+    display: inline-block;
+    font-size: 26px;
+    margin-right: 5px;
+    vertical-align: middle;
+    
+}
+
+
+
+.copyright {
+    font-size:10px;
+    color: #778888;
+    margin-top: 5px;
+    text-align:center;
+}  
+
+
+
+
+
+    
+    
+    
+    </style>
+    
+    
+</head>
+
+<body>
+<!--header section starts -->
+<header>
+
+ <!--navigation bar begins-->
+ <nav>
+ <!--logo image-->
+ <img class="logo-img" src="logo.png" width="15%" height="15%" ALT="webedu" ALIGN=left>
+<ul>
+<li><a  href="index.html">HOME</a></li>
+<li><a href="aboutus.html">ABOUT</a></li>
+<li>
+            <a href="courses.php">COURSES <span class="caret"></span></a>
+<div>
+
+</div>
+</li>
+
+<li><a href="signup.html">SIGNUP</a></li>
+<li><a href="contact.html">CONTACT</a></li>
+<li><a href="admin.html">ADMIN</a></li>
+
+
+</ul>
+</nav>
+<!--navigation bar ends-->
+</header>
+<!-- header section ends-->
+
+<!-- div image slider section starts -->
+<div class="w3-content w3-section" style="max-width:1800px">
+  <img class="mySlides" src="img6.jpg" style="width:100%">
+  <img class="mySlides" src="img7.jpg" style="width:100%">
+  <img class="mySlides" src="img13.jpg" style="width:100%">
+    
+  <div class="centered"><h2 style="font-weight:bold; color:#FFF" >From courses to degrees</h2>
+ <h5 style="font-weight:bold; font-size:20px"> 100% online learning from the world’s best universities and companies<h5>
+ <form>
+ <input class="loginbtn" type="submit" value="Login" name="logbtn" formaction="login.html">
+</form>
+  </div>
+</div>
+      
+    
+      
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 3000); // Change image every 2 seconds
+}
+
+</script>
+<!--div image slider section ends -->
+
+<!-- section container-table-row starts -->
+<section class="sec">
+<div class="container-table-row">
+
+<div class="table-body-cell">
+<div class="card">
+  <img src="1.png" alt="John" style="width:50%"><br><br>
+  <h4 style="font-weight:bold">ONLINE COURSES</h4><br>
+  <p class="title">Take courses from the world's best instructors and universities. Courses include 
+
+recorded auto-graded and peer-reviewed assignments, video lectures, and community discussion forums. 
+
+When you complete a course, you’ll be eligible to receive a shareable electronic Course Certificate 
+
+for a small fee.</p>
+</div>
+</div>
+
+<div class="table-body-cell">
+<div class="card">
+  <img src="2.png" alt="John" style="width:50%"><br><br>
+  <h4 style="font-weight:bold">MEET OUR STAFF</h4><br>
+  <p class="title">Our coaches are hand selected as hardworking compassionate men and women, whose 
+
+goal is to progress parkour and train and foster the next generation of athletes and community 
+
+members.</p>
+</div>
+</div>
+
+<div class="table-body-cell">
+<div class="card">
+  <img src="3.png" alt="John" style="width:50%"><br><br>
+  <h4 style="font-weight:bold">LATEST UPDATES</h4><br>
+  <p class="title">Join our WebEducation group to get latest updates on exam notifications and 
+
+scholarships across India and abroad.When you complete a course, you’ll be eligible to receive a shareable electronic Course Certificate 
+
+for a small fee.</p>
+ </div>
+</div>
+
+
+<div class="table-body-cell">
+<div class="card">
+  <img src="4.png" alt="John" style="width:50%"><br><br>
+  <h4 style="font-weight:bold">PLACEMENT</h4><br>
+  <p class="title">Professional Certificates are training programs from top universities and companies 
+
+that help you be job-ready. Some Professional Certificate programs prepare you to pass an industry 
+
+certification exam, while others help you get the experience needed to launch a career in a specific 
+
+field such as IT support.</p>
+</div>
+</div>
+
+
+</div>
+<!-- section container-table-row ends -->
+
+
+<!-- article begins -->
+<div >
+
+<div class="article-aboutus">
+<div class="harticle">
+  
+  <h2 style="font-weight:bold">About Us</h2><br>
+   <img src="a1.png" alt="John" style="width:70%">
+   <br><br>
+  <p class="title">WebEdu was founded in 2012 by two Stanford Computer Science professors who wanted to share their knowledge and skills with the world.</p>
+<p class="title">Professors Daphne Koller and Andrew Ng put their courses online for anyone to take and taught more learners in a few months than they could have in an entire lifetime in the classroom.</p>
+<br>
+<p class="title">Since then, we’ve built a platform where anyone, anywhere can learn and earn credentials from the world’s top universities and education providers.</p>
+  <a href="aboutus.php" target="_self" style="font-weight:bold">read more</a>
+</div>
+</div>
+
+<div class="article-aboutus">
+<div class="harticle">
+  
+  <h2 style="font-weight:bold">Up Coming Courses</h2><br>
+<p> <a style="color:#4169E1" href="" target="_self">Mathematics and Computer Science</a></p>
+<p> <a style="color:#4169E1" href="" target="_self">Mathematics and Philosophy</a></p>
+<p> <a style="color:#4169E1" href="" target="_self">hilosophy and Modern Languages</a></p>
+<p> <a style="color:#4169E1" href="" target="_self">History (Ancient and Modern)</a></p>
+<p> <a style="color:#4169E1" href="" target="_self">Classical Archaeology and Ancient History</a></p>
+<p><a style="color:#4169E1" href="" target="_self">Physics and Philosophy</a></p>
+<p><a style="color:#4169E1" href="" target="_self">Physics and Computer Science</a></p>
+<p> <a style="color:#4169E1" href="" target="_self">Mathematics and Philosophy</a></p>
+<p> <a style="color:#4169E1" href="" target="_self">hilosophy and Modern Languages</a></p>
+<p> <a style="color:#4169E1" href="" target="_self">History (Ancient and Modern)</a></p>
+</div>
+</div>
+
+</div>
+<!-- article ends -->
+
+</section>
+
+<!-- footer begins -->
+
+<footer>
+       
+        <ul>
+          <li>
+       
+        <div class="text">
+            <h4>Address</h4>
+            <div>
+<p>21,Revolution Street</p>
+<p>Paris,chennai</p>
+<p>TamilNadu,India</p>
+<p>pincode-600091</p>
+        </div>
+    </li>
+	
+	 <li>
+       
+        <div class="text">
+            <h4>Categories</h4>
+            <div>
+<p>Individual Plans</p> 
+<p>Business Plans</p>
+<p>Free Trial</p>
+<p>Academic</p>
+        </div>
+    </li>
+    <li>
+     
+        <div class="text">
+            <h4>Contact</h4>
+            <div>
+<p>+1 555 123456</p>
+<p>+91 8555123</p>
+<p>+0452 223456</p>
+<p>+1 555 173456</p>
+        </div>
+    </li>
+    <li>
+       
+        <div class="text">
+            <h4>Mail Us</h4>
+            <div>
+<p>support@gmail.com</p>
+<p>WebEdufaq@yahoo.com</p>
+<p>we@gmail.com</p>
+<p>WebEducation@rediff.com</p>
+        </div>
+    </li> 
+        </ul>
+        <div class="bar">
+            <div class="bar-wrap">
+                <ul class="links"> <!-- footer menu -->
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="aboutus.php">About Us</a></li>
+                    <li><a href="courses.php">Courses</a></li>
+                    <li><a href="register.php">Register</a></li>
+                    <li><a href="contact.php">Contact Us</a></li>
+                </ul>
+                <div class="social">
+                    <a href="index.php" class="fb">
+                <span data-icon="f" class="icon"></span>
+               
+            </a>
+            <a href="index.php" class="tw">
+                <span data-icon="T" class="icon"></span>
+                
+            </a>
+            <a href="index.php" class="rss">
+                <span data-icon="R" class="icon"></span>
+                
+            </a>
+        </div>
+        <!-- social icons are here -->
+                </div>
+                <div class="clear"></div>
+                <div class="copyright">Copyright &copy; 2014.WebEducation site by crysolite</div>
+            </div>
+        
+    </footer>
+<!-- footer ends -->
+
+
+    </body>
+</html>
