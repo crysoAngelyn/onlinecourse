@@ -1,0 +1,946 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ONLINE EDUCATION</title>
+<style>
+    body {
+  /*font: 13px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
+  color: #404040;*/
+  background: #0ca3d2;
+}
+
+
+
+/* Header */
+header {
+  background-color: #fff;
+   padding: 10px 20px 30px 0px; /* top right bottom left*/
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  
+ 
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: 0.2s;
+}
+
+
+/*body 
+{ 
+padding-top: 25px; 
+}*/
+
+
+/*Navigation bar*/
+
+nav {
+position:fixed;
+ background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 4px;
+ /* box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);*/
+  color: #888;
+  display: block;
+  margin: 0px 0px 0px 0px;
+  overflow: hidden;
+  width: 100%;
+}
+ 
+  nav ul {
+    margin: 0;
+    padding: 0;
+  }
+ 
+    nav ul li {
+      display: inline-block;
+      list-style-type: none;
+  font-size:15px;
+        font-weight:bold;
+      -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -ms-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s;
+    }
+ 
+      nav > ul > li > a > .caret {
+        border-top: 4px solid #aaa;
+       
+        border-right: 4px solid transparent;
+        border-left: 4px solid transparent;
+        content: "";
+        display: inline-block;
+        height: 0;
+        width: 0;
+        vertical-align: middle;
+ 
+        -webkit-transition: color 0.1s linear;
+          -moz-transition: color 0.1s linear;
+        -o-transition: color 0.1s linear;
+          transition: color 0.1s linear;
+      }
+ 
+      nav > ul > li > a {
+        color: #aaa;
+        display: block;
+        line-height: 56px;
+        padding: 0 24px;
+        text-decoration: none;
+      }
+ 
+        nav > ul > li:hover {
+          background-color:#4169E1;
+        }
+ 
+        nav > ul > li:hover > a {
+          color: rgb( 255, 255, 255 );
+        }
+ 
+        nav > ul > li:hover > a > .caret {
+          border-top-color: rgb( 255, 255, 255 );
+        }
+ 
+      nav > ul > li > div {
+		  position:relative;
+        background-color:#fff;
+        border-top: 0;
+        border-radius: 0 0 4px 4px;
+        box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+        display: none;
+        margin: 0;
+        opacity: 0;
+       /* position: absolute;*/
+        width: 165px;
+    visibility: hidden;
+    z-index: 100;
+ 
+        -webkit-transiton: opacity 0.2s;
+        -moz-transition: opacity 0.2s;
+        -ms-transition: opacity 0.2s;
+        -o-transition: opacity 0.2s;
+        -transition: opacity 0.2s;
+      }
+ 
+        nav > ul > li:hover > div {
+          display: block;
+          opacity: 1;
+          visibility: visible;
+        }
+ 
+          nav > ul > li > div ul > li {
+            display: block;
+          }
+ 
+            nav > ul > li > div ul > li > a {
+              color: #aaa;
+              display: block;
+              padding: 12px 24px;
+              text-decoration: none;
+            }
+ 
+              nav > ul > li > div ul > li:hover > a {
+                background-color:#d5f4e6;
+              }
+
+/*signup form*/
+ .errormessage{
+                color: blue;
+                font-style: italic;
+            }
+			 .errormessage1{
+                color: red;
+                font-style: italic;
+            }
+
+.login {
+ position: center;
+  margin:160px 20px 100px 180px;
+  padding: 20px 20px 20px 20px;
+  width: 70%;
+  background: white;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.login:before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  right: -8px;
+ 
+  left: -8px;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 4px;
+}
+
+.login h1 {
+  margin: -20px -20px 21px;
+  line-height: 80px;
+  font-size: 25px;
+  font-weight: bold;
+  color: #555;
+  text-align: center;
+  text-shadow: 0 1px white;
+  background: #f3f3f3;
+  border-bottom: 1px solid #cfcfcf;
+  border-radius: 3px 3px 0 0;
+  /*background-image: -webkit-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: -moz-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: -o-linear-gradient(top, whiteffd, #eef2f5);
+  background-image: linear-gradient(to bottom, whiteffd, #eef2f5);
+  -webkit-box-shadow: 0 1px whitesmoke;*/
+  box-shadow: 0 1px whitesmoke;
+}
+
+.login p {
+  margin: 20px 0 0;
+}
+
+/*.login p:first-child {
+  margin-top: 0;
+}*/
+
+.login input[type=email], .login input[type=password], .login input[type=text] , .login input[type=date] , .login input[type=radio] {
+  width: 70%;
+}
+
+.login p.remember_me {
+  float: left;
+  line-height: 31px;
+  font-weight: bold;
+}
+
+.login p.remember_me label {
+  font-size: 15px;
+  color: #777;
+  cursor: pointer;
+}
+
+.login p.remember_me input {
+  position: relative;
+  bottom: 1px;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.login p.submit {
+  text-align: right;
+  font-weight: bold;
+}
+
+.login-help {
+  margin: 20px 0;
+  font-size: 15px;
+  color: #777;
+  text-align: center;
+ /* text-shadow: 0 1px #2a85a1;*/
+}
+
+.login-help a {
+  color: #0099cc;
+  text-decoration: none;
+}
+
+.login-help a:hover {
+  text-decoration: underline;
+}
+
+:-moz-placeholder {
+  color: #c9c9c9 ;
+  font-size: 13px;
+}
+
+::-webkit-input-placeholder {
+  color: #ccc;
+  font-size: 13px;
+}
+
+input {
+  font-family: 'Lucida Grande', Tahoma, Verdana, sans-serif;
+  font-size: 14px;
+}
+
+input[type=email], input[type=password] , input[type=text], input[type=date] , .select{
+  margin: 5px;
+  padding: 0 10px;
+  width: 200px;
+  height: 34px;
+  color: #404040;
+  background: white;
+  border: 1px solid;
+  border-color: #c4c4c4 #d1d1d1 #d4d4d4;
+  border-radius: 2px;
+  outline: 5px solid #eff4f7;
+  -moz-outline-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+input[type=email]:focus, input[type=password]:focus , input[type=text]:focus , input[type=date]:focus { 
+  border-color: #7dc9e2;
+  outline-color: #dceefc;
+  outline-offset: 0;
+}
+
+input[type=submit] {
+  padding: 0 18px;
+  height: 39px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #527881;
+  text-shadow: 0 1px #e3f1f1;
+  background: #cde5ef;
+  border: 1px solid;
+  border-color: #b4ccce #b3c0c8 #9eb9c2;
+  border-radius: 16px;
+  outline: 0;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  background-image: -webkit-linear-gradient(top, #edf5f8, #cde5ef);
+  background-image: -moz-linear-gradient(top, #edf5f8, #cde5ef);
+  background-image: -o-linear-gradient(top, #edf5f8, #cde5ef);
+  background-image: linear-gradient(to bottom, #edf5f8, #cde5ef);
+  -webkit-box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+input[type=submit]:active {
+  background: #cde5ef;
+  border-color: #9eb9c2 #b3c0c8 #b4ccce;
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.lt-ie9 input[type=email], .lt-ie9 input[type=password] , .lt-ie9 input[type=text], .lt-ie9 input[type=date] , .lt-ie9 select[name=career]{
+  line-height: 34px;
+}
+
+
+
+
+
+
+
+/*footer*/
+
+@import url(http://weloveiconfonts.com/api/?family=zocial);
+* {
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'zocial', sans-serif;
+}
+[data-icon]:before {
+    font-family: 'zocial';
+    content: attr(data-icon);
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+    -o-transition:  all .2s linear;
+    transition: all .2s linear;
+}
+.clear {
+    clear: both;
+}
+
+
+
+footer {
+    background-color:#D3D3D3;
+    position: relative;
+    z-index: 1;
+}
+
+
+footer > ul {
+    list-style: none outside none;
+    margin: 0 auto;
+    max-width:auto;
+    overflow: hidden;
+    padding: 25px 0;
+    position: relative;
+    width: 95%;
+}
+footer > ul li {
+    float: left;
+    padding: 20px 15px;
+    width: 33.3%;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+
+footer > ul li .icon {
+    color: #999999;
+    float: left;
+    font-size: 60px;
+    line-height: 80px;
+}
+footer > ul li .text {
+    color: #282828;
+    font-size: 13px;
+    line-height: 20px;
+    margin-left: 105px;
+    position: relative;
+    text-align: justify;
+}
+.text h4 {
+    color: #999999;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.text a {
+    border-bottom: 1px dotted transparent;
+    color: #FFDD00;
+    font-weight: bold;
+}
+.text a:hover {
+    border-color: #FFDD00;
+}
+
+
+
+
+footer .bar {
+    background-color:#181818;
+    padding: 15px 0;
+}
+footer .bar-wrap {
+    font-size: 12px;
+    margin: 0 auto;
+    max-width: 1200px;
+    position: relative;
+    width: 95%;
+}
+.links {
+    float: left;
+    list-style: none outside none;
+    position: relative;
+}
+.links li {
+    float: left;
+    margin-right: 10px;
+}
+.links a {
+    color: #778888;
+}
+.links a:hover {
+    color: #FFFFFF;
+}
+
+
+
+.social {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.social a {
+    color: #778888;
+    margin-left: 20px;
+}
+.social a:hover {
+    color: #FFFFFF;
+}
+.social .icon {
+    display: inline-block;
+    font-size: 26px;
+    margin-right: 5px;
+    vertical-align: middle;
+    
+}
+
+
+
+.copyright {
+    font-size:10px;
+    color: #778888;
+    margin-top: 5px;
+    text-align:center;
+}  
+
+</style>  
+ 
+</head>
+<body>
+
+<!--header section starts -->
+<header>
+
+ <!--navigation bar begins-->
+ <nav>
+ <!--logo image-->
+ <img class="logo-img" src="logo.png" width="15%" height="15%" ALT="webedu" ALIGN=left>
+<ul>
+<li><a  href="index.html">HOME</a></li>
+<li><a href="aboutus.html">ABOUT</a></li>
+<li>
+         <a href="courses.html">COURSES<span class="caret"></span></a>
+<div>
+
+</div>
+</li>
+
+<li><a href="signup.html">SIGNUP</a></li>
+<li><a href="contact.html">CONTACT</a></li>
+<li><a href="admin.html">ADMIN</a></li>
+
+
+   
+     
+</ul>
+</nav>
+
+   
+    
+<!--navigation bar ends-->
+</header>
+<!-- header section ends-->
+
+    
+    
+
+<!--SIGNUP section starts-->
+<section>
+  
+	<div class="login">
+  <h1>Welcome-Enroll Your Courses</h1>
+        
+  <form>
+      
+      <h2 style="color:dodgerblue">Personal Information</h2>
+      <p style="color:gray">*All the fields are required.</p>
+      <p style="color:gray">*Firstname and Lastname should contain minimum 5 characters.</p><br>
+        <hr style="border-radius: 10px;color: darkcyan">
+    
+    <table style="width=60%;height=100%">
+      <tr>
+        <td style="padding-right:50px"><br><h4 style="color:gray">FIRTNAME</h4>
+            <p><input type="text" id="firstname" name="firstname1" value="" pattern="[a-zA-z0-9]{5,50}" readonly required>
+    
+    <span id="err1" class="errormessage1"> </span></p>
+          </td>
+        
+          
+          <td ><br><h4 style="color:gray">LASTNAME</h4>
+          <p><input type="text" id="lastname" name="lastname1" placeholder="Lastname" pattern="[a-zA-z0-9]{5,50}" required>
+  
+    <span id="err2" class="errormessage1"> </span></p>
+          </td>
+        </tr>
+      
+      
+        <tr>
+            <td>
+             <br><h4 style="color:gray">DOB</h4>
+            <p><input id="dob" type="date" name="dbirth" value="2011-01-13" required>
+                  <span id="err3" class="errormessage1"> </span></p>
+            </td>
+            
+            <td>
+                <br><h4 style="color:gray">CAREER LEVEL</h4>
+          <p>  <select  id="career" name="career" class="select" required>
+               <option value="Student">Office Worker</option>
+               <option value="Business">Student</option>
+               <option value="OfficeWorker">Business</option>
+               <option value="OfficeWorker">Entrepreneur</option>
+               <option value="Other">Other</option>
+               </select>
+              <span id="err4" class="errormessage1"> </span>
+         </p> 
+            </td> 
+        </tr>
+        
+        
+        
+        
+        
+        <tr>
+            <td>
+            <br><h4 style="color:gray">E-MAIL</h4>
+             <p><input type="email" id="usermail" name="usermail" value="">
+                <span id="err5" class="errormessage1"> </span></p>
+                
+            </td>
+             
+            <td >
+            <!--<br><h4 style="color:gray">ALTERNATE E-MAIL</h4>
+             <p><input type="email" id="altmail" name="altmail" placeholder="yourname@email.com" required>
+                <span id="err6" class="errormessage1"> </span></p>-->
+                 <br><h4 style="color:gray">GENDER</h4>
+                 <input type="radio" name="gender" value="Male" checked>Male&nbsp;&nbsp;
+  <input type="radio" name="gender" value="Female">Female
+  <input type="radio" name="gender" value="other">Other
+ 
+            </td>
+         </tr>
+        
+       
+    
+        
+        
+      </table><br><br>
+  
+      
+       
+      <h2 style="color:dodgerblue">Select Courses</h2><p style="color:gray">
+      <p style="color:gray">*Select the time slots according to your leisure time.</p><br>
+   
+       <hr style="border-radius: 10px;color: darkcyan"><br><br>
+      
+      <table>
+      <tr>
+    <td style="padding-right:200px;padding-left:150px">
+            <br><h4 style="color:gray">COMPUTER SSCIENCE</h4><br>
+       <p>  <select name="cs" id="cs" class="select">
+            <option value="0">Please Select</option>
+             <option value="0">C Programming</option>
+         
+          <option value="0">Big Data</option>
+         
+          <option value="0">Python</option>
+         
+         
+           
+  
+</select>
+         </p> 
+            </td> 
+           <td>
+                <br><h4 style="color:gray">BUSINESS</h4><br>
+             <p> <select  class="select" name="bus" id="bus">
+             <option value="0">Please Select</option>
+                 
+           <option value="0">Marketing</option>
+         
+          <option value="0">Accounting</option>
+         
+          <option value="0">Human Resource</option>
+         
+         
+                 
+                 
+ 
+</select>
+         </p> 
+              
+            </td> 
+          </tr>
+          
+           <tr>
+    <td style="padding-left:150px">
+                <br><h4 style="color:gray">MATH AND LOGIC</h4><br>
+          
+         <p>  <select  class="select" name="math" id="math">
+         <option value="0">Please Select</option>
+           
+             <option value="0">Advanced Algebra</option>
+         
+          <option value="0">Introduction to Trignomentry</option>
+         
+          <option value="0">Geomentry</option>
+         
+         
+                  
+</select>
+         </p> 
+            </td> 
+           <td>
+                <br><h4 style="color:gray">ARTS AND HUMANITIES</h4><br>
+        
+               
+          <p>  <select  class="select" name="arts" id="arts">
+ <option value="0">Please Select</option>
+  
+            
+                 
+             <option value="0">Arts & Science</option>
+         
+          <option value="0">Humanities</option>
+         
+          <option value="0">Geomentry</option>
+         
+              
+              
+</select>
+         </p> 
+            </td> 
+          </tr>
+          
+          <tr>
+          <td style="padding-left:150px">
+               <br><h4 style="color:gray" >LEVEL</h4>
+             
+              <p>  <select name="level" id="level" class="select" required>
+               <option value="Student">Mixed</option>
+               <option value="Business"> Beginner</option>
+               <option value="OfficeWorker">Intermediate</option>
+               <option value="OfficeWorker">Advanced</option>
+               
+               </select>
+         </p> 
+              
+          </td>
+              
+              <td>
+               <br><h4 style="color:gray">TYPE</h4>
+           
+             
+                  <p>  <!--<select name="type" class="select" required>
+               <option value="Student">Course</option>
+               <option value="Business">Specialization</option>
+              
+               </select>-->
+                      <input type="radio" name="type" value="Course" checked>Course<br>
+  <input type="radio" name="type" value="Specialization">Specialization<br>
+ 
+         </p> 
+                  
+          </td>
+           
+           
+          </tr>
+          
+          <tr>
+          
+          <td style="padding-left:150px">
+                <br><h4 style="color:gray">LANGUAGE</h4>
+          <p>  <select name="lang" class="select" required>
+               <option value="Student">English</option>
+               <option value="Business">French</option>
+               <option value="OfficeWorker">Russian</option>
+               <option value="OfficeWorker">Spanish</option>
+                <option value="OfficeWorker">German</option>
+               <option value="Other">Other</option>
+               </select>
+         </p> 
+            </td> 
+          
+               
+              <td>
+                <br><h4 style="color:gray">TIME SLOTS</h4>
+          <p>  <select name="timeslot" class="select" required>
+               <option value="Student">Weekends</option>
+               <option value="Business">All-Evenings(8.00-10.00PM)</option>
+               <option value="OfficeWorker">All-Morning(6.00-8.00AM)</option>
+               <option value="OfficeWorker">All-Afternoon(1.00-3.00PM)</option>
+               <option value="Other">Other</option>
+               </select>
+         </p> 
+            </td> 
+              
+              
+              
+              
+          </tr>
+          <tr>
+          <td>
+                <br><br><h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Total Fee To Be Paid:</h2>
+              </td>
+              <td>
+              
+               <br><br><label id="totalPrice" name="totalprice"></label>
+              </td>
+          </tr>
+          
+          <tr>
+              <td style="padding-left:100px">
+              
+          
+              </td>
+        
+          </tr>
+      </table><br>
+      
+      
+  
+   
+     <br><p class="remember_me">
+      <label>
+        <input type="checkbox" name="remember_me" id="remember_me" required>
+       By Joinning the courses you agree to our Terms & Privacy.
+      </label>
+      
+    
+    <p class="submit">
+        <input type="submit" name="coursereg"  id="enrollbtn" value="Enroll">&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="submit"  id="fee" name="fee" value="Checkfee">
+      </p><br><br>
+   
+	
+	
+        </form>
+        
+        
+       
+        
+     
+        
+    
+	
+	
+	<script>
+var ebtn=document.getElementById('enrollbtn');
+
+function checkValidity() 
+{
+    var check=1;
+var fn=document.getElementById('firstname');	
+	if(fn.checkValidity)
+	{
+	document.getElementById("err1").innerHTML=fn.validationMessage;
+         if (fn.validationMessage.toString().length!=0)
+        check=0;
+
+	}
+	if(fn.validity.patternMismatch)
+	{
+	document.getElementById("err1").innerHTML = fn.validationMessage;
+          if (fn.validationMessage.toString().length!=0)
+        check=0;
+	}
+    
+ var ln=document.getElementById('lastname');	
+	if(ln.checkValidity)
+	{
+	document.getElementById("err2").innerHTML=ln.validationMessage;
+         if (ln.validationMessage.toString().length!=0)
+        check=0;
+
+	}
+	if(ln.validity.patternMismatch)
+	{
+	document.getElementById("err2").innerHTML = ln.validationMessage;
+          if (ln.validationMessage.toString().length!=0)
+        check=0;
+	}
+    
+
+    
+var mail=document.getElementById('usermail');	
+	if(mail.checkValidity)
+	{
+	document.getElementById("err5").innerHTML=mail.validationMessage;
+if (mail.validationMessage.toString().length!=0)
+        check=0;
+        
+	}
+    if(mail.validity.patternMismatch)
+	{
+      document.getElementById("err5").innerHTML=mail.validationMessage;
+if (mail.validationMessage.toString().length!=0)
+        check=0;
+    }
+        
+     if(check==0)
+        {
+            return false;
+        }
+   else{
+        return true;
+   }
+
+	
+	/*var le=document.getElementById('level');	
+	if(le.checkValidity)
+	{
+	document.getElementById("err7").innerHTML=le.validationMessage;
+
+	}
+    
+var ty=document.getElementById('type');	
+	if(ty.checkValidity)
+	{
+	document.getElementById("err8").innerHTML=ty.validationMessage;
+
+	}*/
+	
+}	
+        
+ebtn.onclick=function(e) {
+
+var bool=checkValidity();
+if(bool==false) { 
+e.preventDefault();
+}
+
+  // location.replace("https://www.w3schools.com");
+//}
+ };	
+
+"use strict";
+function courseprice() {
+var c1=Number(document.getElementById("cs").value);
+var c2=Number(document.getElementById("bus").value);
+var c3=Number(document.getElementById("math").value);
+var c4=Number(document.getElementById("arts").value);
+
+document.getElementById("totalPrice").innerHTML=c1+c2+c3+c4 ;
+     return false;
+
+}
+    
+  document.getElementById('fee').addEventListener('click',courseprice);          
+        
+        
+</script>
+        
+        
+        
+
+<!--SIGNUP section ends-->
+
+
+<!-- footer begins -->
+
+<footer>
+       
+       
+        <div class="bar">
+            <div class="bar-wrap">
+                <ul class="links"> <!-- footer menu -->
+                  <li><a href="webeducation.html">Home</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="register.html">Register</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+                <div class="social">
+                    <a href="register.html" class="fb">
+                <span data-icon="f" class="icon"></span>
+               
+            </a>
+            <a href="register.html" class="tw">
+                <span data-icon="T" class="icon"></span>
+                
+            </a>
+            <a href="register.html" class="rss">
+                <span data-icon="R" class="icon"></span>
+                
+            </a>
+        </div>
+        <!-- social icons are here -->
+                </div>
+                <div class="clear"></div>
+                <div class="copyright">Copyright &copy; 2014.WebEducation site by crysolite</div>
+            </div>
+        
+    </footer>
+<!-- footer ends -->
+
+	</body>
+	</html>
+	
