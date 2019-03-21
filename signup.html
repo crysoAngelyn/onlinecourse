@@ -618,23 +618,27 @@ var password1 = document.getElementById('password');
        if (password2.validationMessage.toString().length!=0)
        check=0;
 	}
-    if(check==0)
+    
+
+	if(password1.value!=password2.value) 
+{ 
+document.getElementById("err4").innerHTML="Passwords must match"; 
+      if (password2.validationMessage.toString().length!=0)
+       check=0;
+//return false;
+} 
+    
+     if(check==0)
         {
             return false;
         }
    else{
         return true;
    }
-/*if(password1.value!=password2.value) 
-{ 
-document.getElementById("err4").innerHTML="Passwords must match"; 
-return false;
-} 
-else 
-{ 
-document.getElementById("err4").innerHTML =""; 
-return true;
-} */
+    
+	
+	
+	
 	
 }	
         
