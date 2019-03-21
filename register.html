@@ -730,7 +730,7 @@ footer .bar-wrap {
               
                </select>-->
                       <input type="radio" name="type" value="Course" checked>Course<br>
-  <input type="radio" name="type" value="Specialization">Specialization<br>
+  <input type="radio" name="type" value="Specialization">Degree<br>
  
          </p> 
                   
@@ -819,6 +819,7 @@ footer .bar-wrap {
 	
 	<script>
 var ebtn=document.getElementById('enrollbtn');
+var fbtn=document.getElementById('fee');
 
 function checkValidity() 
 {
@@ -904,8 +905,22 @@ e.preventDefault();
 
   // location.replace("https://www.w3schools.com");
 //}
+ };
+
+fbtn.onclick=function(e) {
+
+var bool=checkValidity();
+if(bool==false) { 
+e.preventDefault();
+}
+
+  // location.replace("https://www.w3schools.com");
+//}
  };	
 
+
+		
+		
 "use strict";
 function courseprice() {
 var c1=Number(document.getElementById("cs").value);
